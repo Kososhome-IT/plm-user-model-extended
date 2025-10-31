@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_users_form_inherit_add_tabs" model="ir.ui.view">
+        <field name="name">res.users.form.inherit.add.tabs</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <!-- Locate the existing notebook element -->
+            <notebook position="inside">
+                <!-- Add new pages/tabs -->
+                <page string="Locations">
+                    <group>
+                        <field name="user_type"/>
+                        <field name="country_id"/>
+                        <field name="team_id"/>
+                    </group>
+                </page>
+                <!-- You can add multiple pages/tabs here -->
+            </notebook>
+        </field>
+    </record>
+</odoo>

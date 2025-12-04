@@ -5,19 +5,18 @@
         <field name="model">res.users</field>
         <field name="inherit_id" ref="base.view_users_form"/>
         <field name="arch" type="xml">
-            <!-- Locate the existing notebook element -->
-           
-            <notebook position="inside">
-                <!-- Add new pages/tabs -->
+
+            <!-- Insert inside the existing notebook on the user form -->
+            <xpath expr="//form/sheet/notebook" position="inside">
                 <page string="Locations">
                     <group>
-                     <field name="partner_id" string="Partner ID"/>
+                        <field name="partner_id" string="Partner ID"/>
                         <field name="user_type"/>
                         <field name="country_id"/>
                     </group>
                 </page>
-                <!-- You can add multiple pages/tabs here -->
-            </notebook>
+            </xpath>
+
         </field>
     </record>
 </odoo>

@@ -6,13 +6,14 @@
         <field name="inherit_id" ref="base.view_users_form"/>
         <field name="arch" type="xml">
             <!-- Locate the existing notebook element -->
+           
             <notebook position="inside">
                 <!-- Add new pages/tabs -->
                 <page string="Locations">
                     <group>
+                     <field name="partner_id" string="Partner ID"/>
                         <field name="user_type"/>
                         <field name="country_id"/>
-                        <field name="team_id"/>
                     </group>
                 </page>
                 <!-- You can add multiple pages/tabs here -->
